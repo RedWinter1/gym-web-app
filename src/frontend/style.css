@@ -1,4 +1,6 @@
-/* CONFIGURACIÓN GENERAL */
+/* ==========================================================================
+   1. CONFIGURACIÓN GENERAL
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +14,10 @@ body {
     line-height: 1.6;
 }
 
-/* MENÚ DE NAVEGACIÓN */
+
+/* ==========================================================================
+   2. MENÚ DE NAVEGACIÓN
+   ========================================================================== */
 header {
     background-color: #000000; /* Negro puro */
     padding: 20px;
@@ -33,7 +38,7 @@ nav {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #d4af37; /* Oro metálico (Gold) */
+    color: #d4af37; /* Oro metálico */
     letter-spacing: 2px;
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
@@ -55,7 +60,10 @@ nav ul li a:hover {
     color: #d4af37; /* Cambio a dorado al pasar el mouse */
 }
 
-/* SECCIÓN DE BIENVENIDA (HERO) */
+
+/* ==========================================================================
+   3. SECCIÓN DE BIENVENIDA (HERO)
+   ========================================================================== */
 #inicio {
     height: 60vh;
     display: flex;
@@ -82,9 +90,12 @@ nav ul li a:hover {
     color: #b3b3b3;
 }
 
-/* BOTONES ORO PREMIUM */
+
+/* ==========================================================================
+   4. COMPONENTES COMUNES (BOTONES Y SECCIONES)
+   ========================================================================== */
 button {
-    background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%); /* Degradado oro de lujo */
+    background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%); /* Degradado oro */
     color: #000; /* Texto negro para contraste */
     border: none;
     padding: 12px 30px;
@@ -100,10 +111,9 @@ button {
 button:hover {
     transform: scale(1.05);
     box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-    background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 100%); /* Oro más brillante al pasar cursor */
+    background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 100%);
 }
 
-/* SECCIONES COMUNES (CLASES Y PLANES) */
 section {
     padding: 80px 20px;
     max-width: 1200px;
@@ -119,7 +129,6 @@ section h2 {
     letter-spacing: 1px;
 }
 
-/* Línea dorada decorativa debajo de los títulos */
 section h2::after {
     content: '';
     display: block;
@@ -129,33 +138,19 @@ section h2::after {
     margin: 10px auto 0;
 }
 
-/* CONTAINER PARA LAS TARJETAS */
-/* CONTAINER PARA LAS PLANES (MANTIENE FLEX) */
-#planes {
+
+/* ==========================================================================
+   5. CONTENEDORES Y TARJETAS (FLEX HORIZONTAL SIMÉTRICO)
+   ========================================================================== */
+#clases, #planes {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
+    width: 100%;
+    margin-top: 20px;
 }
 
-/* CONFIGURACIÓN EXCLUSIVA PARA CLASES (GRID PREMIUM SIMÉTRICO) */
-#clases {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Crea dos columnas iguales arriba */
-    justify-content: center;
-    justify-items: center;
-    gap: 30px;
-    max-width: 800px; /* Centra el bloque general */
-    margin: 0 auto;
-}
-
-/* FUERZA AL TERCER CUADRO (CARDIO) A UBICARSE CENTRADO ABAJO */
-#clases div:nth-child(3) {
-    grid-column: 1 / span 2; /* Ocupa el ancho de las dos columnas */
-    max-width: 350px; /* Mantiene el tamaño idéntico a los de arriba */
-}
-
-/* TARJETAS CONTENEDORAS COMPARTIDAS */
 #clases div, #planes div {
     background-color: #141414;
     padding: 30px;
@@ -167,8 +162,6 @@ section h2::after {
     transition: 0.3s;
 }
 
-
-/* Efecto al pasar el mouse por encima de las tarjetas */
 #clases div:hover, #planes div:hover {
     border-color: #d4af37;
     transform: translateY(-5px);
@@ -190,7 +183,10 @@ section h2::after {
     color: #fff;
 }
 
-/* PIE DE PÁGINA */
+
+/* ==========================================================================
+   6. PIE DE PÁGINA
+   ========================================================================== */
 footer {
     background-color: #000;
     text-align: center;
@@ -204,7 +200,10 @@ footer p {
     margin-bottom: 10px;
 }
 
-/* BOTONES FLOTANTES (REDES SOCIALES) */
+
+/* ==========================================================================
+   7. BOTONES FLOTANTES DE REDES SOCIALES
+   ========================================================================== */
 .redes-flotantes {
     position: fixed;
     bottom: 30px;
@@ -217,7 +216,7 @@ footer p {
 
 .redes-flotantes a {
     text-decoration: none;
-    font-size: 26px; /* Ajusta un poco el tamaño */
+    font-size: 26px;
     padding: 0;
     width: 55px; 
     height: 55px; 
@@ -229,49 +228,40 @@ footer p {
     transition: 0.3s ease;
 }
 
-/* Fuerza el color dorado inicial en el icono de WhatsApp */
-.btn-whatsapp i {
-    color: #d4af37;
-}
-/* Al pasar el mouse por encima cambia a negro */
-.btn-whatsapp:hover i {
-    color: #000;
-}
-
-/* Fuerza el color negro inicial en el de Instagram */
-.btn-instagram i {
-    color: #000;
-}
-/* Al pasar el mouse por encima cambia a dorado */
-.btn-instagram:hover i {
-    color: #d4af37;
-}
-
-
-
-/* Estilo Premium para WhatsApp */
+/* Estilo Individual: WhatsApp */
 .btn-whatsapp {
     background-color: #0b0b0b;
-    color: #d4af37; /* Texto Dorado */
-    border: 2px solid #d4af37; /* Borde Dorado */
+    border: 2px solid #d4af37;
+}
+
+.btn-whatsapp i {
+    color: #d4af37;
 }
 
 .btn-whatsapp:hover {
     background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
-    color: #000; /* Fondo dorado, texto negro al pasar el mouse */
     transform: scale(1.05);
 }
 
-/* Estilo Premium para Instagram */
+.btn-whatsapp:hover i {
+    color: #000;
+}
+
+/* Estilo Individual: Instagram */
 .btn-instagram {
     background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
-    color: #000; /* Fondo dorado, texto negro de base */
+}
+
+.btn-instagram i {
+    color: #000;
 }
 
 .btn-instagram:hover {
     background: #000;
-    color: #d4af37;
-    border: 2px solid #d4af37; /* Se invierten los colores al pasar el mouse */
+    border: 2px solid #d4af37;
     transform: scale(1.05);
 }
 
+.btn-instagram:hover i {
+    color: #d4af37;
+}
