@@ -217,17 +217,36 @@ footer p {
 
 .redes-flotantes a {
     text-decoration: none;
-    font-size: 24px; /* Aumenta el tamaño del icono */
+    font-size: 26px; /* Ajusta un poco el tamaño */
     padding: 0;
-    width: 55px; /* Ancho fijo para hacer un círculo */
-    height: 55px; /* Alto fijo para hacer un círculo */
-    border-radius: 50%; /* Círculo perfecto */
+    width: 55px; 
+    height: 55px; 
+    border-radius: 50%; 
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     transition: 0.3s ease;
 }
+
+/* Fuerza el color dorado inicial en el icono de WhatsApp */
+.btn-whatsapp i {
+    color: #d4af37;
+}
+/* Al pasar el mouse por encima cambia a negro */
+.btn-whatsapp:hover i {
+    color: #000;
+}
+
+/* Fuerza el color negro inicial en el de Instagram */
+.btn-instagram i {
+    color: #000;
+}
+/* Al pasar el mouse por encima cambia a dorado */
+.btn-instagram:hover i {
+    color: #d4af37;
+}
+
 
 
 /* Estilo Premium para WhatsApp */
