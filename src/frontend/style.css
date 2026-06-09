@@ -130,24 +130,43 @@ section h2::after {
 }
 
 /* CONTAINER PARA LAS TARJETAS */
-#clases, #planes {
+/* CONTAINER PARA LAS PLANES (MANTIENE FLEX) */
+#planes {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
 }
 
-/* TARJETAS CONTENEDORAS */
+/* CONFIGURACIÓN EXCLUSIVA PARA CLASES (GRID PREMIUM SIMÉTRICO) */
+#clases {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Crea dos columnas iguales arriba */
+    justify-content: center;
+    justify-items: center;
+    gap: 30px;
+    max-width: 800px; /* Centra el bloque general */
+    margin: 0 auto;
+}
+
+/* FUERZA AL TERCER CUADRO (CARDIO) A UBICARSE CENTRADO ABAJO */
+#clases div:nth-child(3) {
+    grid-column: 1 / span 2; /* Ocupa el ancho de las dos columnas */
+    max-width: 350px; /* Mantiene el tamaño idéntico a los de arriba */
+}
+
+/* TARJETAS CONTENEDORAS COMPARTIDAS */
 #clases div, #planes div {
-    background-color: #141414; /* Gris ultra oscuro casi negro */
+    background-color: #141414;
     padding: 30px;
     border-radius: 8px;
-    flex: 1;
+    width: 100%;
     min-width: 280px;
     max-width: 350px;
-    border: 1px solid #262118; /* Borde dorado apagado */
+    border: 1px solid #262118;
     transition: 0.3s;
 }
+
 
 /* Efecto al pasar el mouse por encima de las tarjetas */
 #clases div:hover, #planes div:hover {
