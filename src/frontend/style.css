@@ -203,3 +203,54 @@ footer {
 footer p {
     margin-bottom: 10px;
 }
+
+/* BOTONES FLOTANTES (REDES SOCIALES) */
+.redes-flotantes {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 1000;
+}
+
+.redes-flotantes a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 12px 20px;
+    border-radius: 50px; /* Bordes completamente redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+/* Estilo Premium para WhatsApp */
+.btn-whatsapp {
+    background-color: #0b0b0b;
+    color: #d4af37; /* Texto Dorado */
+    border: 2px solid #d4af37; /* Borde Dorado */
+}
+
+.btn-whatsapp:hover {
+    background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+    color: #000; /* Fondo dorado, texto negro al pasar el mouse */
+    transform: scale(1.05);
+}
+
+/* Estilo Premium para Instagram */
+.btn-instagram {
+    background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+    color: #000; /* Fondo dorado, texto negro de base */
+}
+
+.btn-instagram:hover {
+    background: #000;
+    color: #d4af37;
+    border: 2px solid #d4af37; /* Se invierten los colores al pasar el mouse */
+    transform: scale(1.05);
+}
+
