@@ -7,19 +7,19 @@
 }
 
 body {
-    background-color: #111; /* Fondo oscuro estilo gimnasio */
+    background-color: #0b0b0b; /* Negro profundo */
     color: #fff; /* Texto blanco */
     line-height: 1.6;
 }
 
 /* MENÚ DE NAVEGACIÓN */
 header {
-    background-color: #000;
+    background-color: #000000; /* Negro puro */
     padding: 20px;
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 2px solid #222;
+    border-bottom: 2px solid #1a150e; /* Borde sutil dorado oscuro */
 }
 
 nav {
@@ -33,8 +33,9 @@ nav {
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #ff3e3e; /* Rojo deportivo impactante */
+    color: #d4af37; /* Oro metálico (Gold) */
     letter-spacing: 2px;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
@@ -43,7 +44,7 @@ nav ul {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #e5e5e5;
     text-decoration: none;
     padding: 10px 20px;
     font-weight: bold;
@@ -51,7 +52,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff3e3e;
+    color: #d4af37; /* Cambio a dorado al pasar el mouse */
 }
 
 /* SECCIÓN DE BIENVENIDA (HERO) */
@@ -62,8 +63,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-    /* Imagen deportiva de fondo con capa oscura encima */
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://unsplash.com') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('https://unsplash.com') no-repeat center center/cover;
     padding: 20px;
 }
 
@@ -72,32 +72,35 @@ nav ul li a:hover {
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: #fff;
 }
 
 #inicio p {
     font-size: 18px;
     max-width: 600px;
     margin-bottom: 30px;
-    color: #ccc;
+    color: #b3b3b3;
 }
 
-/* BOTONES PREMIUM */
+/* BOTONES ORO PREMIUM */
 button {
-    background-color: #ff3e3e;
-    color: #fff;
+    background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%); /* Degradado oro de lujo */
+    color: #000; /* Texto negro para contraste */
     border: none;
     padding: 12px 30px;
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
     transition: 0.3s;
 }
 
 button:hover {
-    background-color: #cc3333;
     transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+    background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 100%); /* Oro más brillante al pasar cursor */
 }
 
 /* SECCIONES COMUNES (CLASES Y PLANES) */
@@ -113,19 +116,20 @@ section h2 {
     margin-bottom: 40px;
     text-transform: uppercase;
     position: relative;
+    letter-spacing: 1px;
 }
 
-/* Línea roja decorativa debajo de los títulos */
+/* Línea dorada decorativa debajo de los títulos */
 section h2::after {
     content: '';
     display: block;
     width: 60px;
-    height: 4px;
-    background-color: #ff3e3e;
+    height: 3px;
+    background-color: #d4af37;
     margin: 10px auto 0;
 }
 
-/* CONTAINER PARA LAS TARJETA (GRILLA REPOSITIVA) */
+/* CONTAINER PARA LAS TARJETAS */
 #clases, #planes {
     display: flex;
     flex-wrap: wrap;
@@ -135,28 +139,29 @@ section h2::after {
 
 /* TARJETAS CONTENEDORAS */
 #clases div, #planes div {
-    background-color: #1a1a1a;
+    background-color: #141414; /* Gris ultra oscuro casi negro */
     padding: 30px;
     border-radius: 8px;
     flex: 1;
     min-width: 280px;
     max-width: 350px;
-    border: 1px solid #333;
+    border: 1px solid #262118; /* Borde dorado apagado */
     transition: 0.3s;
 }
 
-/* Efecto al pasar el mouse por encima */
+/* Efecto al pasar el mouse por encima de las tarjetas */
 #clases div:hover, #planes div:hover {
-    border-color: #ff3e3e;
+    border-color: #d4af37;
     transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(255, 62, 62, 0.2);
+    box-shadow: 0 5px 20px rgba(212, 175, 55, 0.15);
 }
 
 #clases h3, #planes h3 {
     margin-bottom: 15px;
-    color: #ff3e3e;
+    color: #d4af37;
     font-size: 20px;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 #planes p {
@@ -172,8 +177,8 @@ footer {
     text-align: center;
     padding: 40px 20px;
     margin-top: 40px;
-    border-top: 2px solid #222;
-    color: #777;
+    border-top: 2px solid #1a150e;
+    color: #555;
 }
 
 footer p {
