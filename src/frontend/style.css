@@ -217,16 +217,18 @@ footer p {
 
 .redes-flotantes a {
     text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 12px 20px;
-    border-radius: 50px; /* Bordes completamente redondeados */
+    font-size: 24px; /* Aumenta el tamaño del icono */
+    padding: 0;
+    width: 55px; /* Ancho fijo para hacer un círculo */
+    height: 55px; /* Alto fijo para hacer un círculo */
+    border-radius: 50%; /* Círculo perfecto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     transition: 0.3s ease;
-    text-align: center;
 }
+
 
 /* Estilo Premium para WhatsApp */
 .btn-whatsapp {
